@@ -1,0 +1,901 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --first-color: hsl(354, 78%, 60%);
+    --button-color: hsl(0, 0%, 17%);
+    --button-color-alt: hsl(0, 0%, 21%);
+    --card-color: hsl(0, 0%, 90%);
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 55%);
+    --body-color: hsl(206, 4%, 97%);
+    --container-color: hsl(0, 0%, 100%);
+    --border-color: hsl(0, 0%, 94%);
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s;
+}
+
+/* nav */
+
+.encabezado {
+    position: relative;
+    z-index: 3;
+}
+
+.navbar {
+    width: 100%;
+    height: 4.1rem;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: background-color 0.3s;
+}
+
+.navbar--scroll {
+    background-color: var(--container-color);
+    box-shadow: 0px 0px 30px -3px rgba(0, 0, 0, 0.641);
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 13rem;
+    cursor: pointer;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.tamaño {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 5px;
+    fill: var(--title-color);
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+.tamaño0 {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--first-color);
+    transition: color 0.3s;
+}
+
+.tamañoY {
+    transition: color 0.3s;
+}
+
+.tamañoX {
+    transition: color 0.3s;
+}
+
+.bolsa {
+    position: relative;
+}
+
+.span1 {
+    background-color: var(--title-color);
+    color: var(--card-color);
+    padding: 2px 6px;
+    font-size: small;
+    border-radius: 50%;
+    position: absolute;
+    top: 11px;
+    right:2px;
+    cursor: pointer;
+    transition: background-color 0.3s color 0.3s;
+}
+
+.span0 {
+    color: var(--title-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+#menu {
+    z-index: 3;
+}
+
+#canasta {
+    z-index: 3;
+}
+
+a {
+    text-decoration: none;
+    position: absolutes;
+}
+
+.a4 {
+    text-decoration: none;
+    color: var(--title-color);
+    font-size: 20px;
+    transition: color 0.1s;
+}
+
+.a5 {
+    text-decoration: none;
+    color: var(--title-color);
+    font-size: 20px;
+    transition: color 0.1s;
+}
+
+.a4:hover {
+    color: var(--first-color);
+}
+
+.a5:hover {
+    color: var(--first-color);
+}
+
+.menuu {
+    background-color: var(--container-color);
+    position: fixed;
+    right: 100%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s, right 0.3;
+}
+
+.ver-menu {
+    right: 0;
+}
+
+.boton0 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.boton-compra {
+    padding: 1rem 11rem;
+    background-color: var(--button-color);
+    color: var(--container-color);
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boton-compra:hover {
+    background-color: var(--first-color);
+}
+
+/*  secci+on uno de presentación */
+
+.padre {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fondo {
+    background-color: var(--first-color);
+    width: 50%;
+    height: 405px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 3rem;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.titulo {
+    color: var(--button-color);
+    transition: color 0.3s;
+}
+
+.texto0 {
+    color: var(--text-color-light);
+}
+
+.span2 {
+    color: var(--first-color);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+.a1 {
+    text-decoration: none;
+    color: var(--body-color);
+    background-color: var(--button-color);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    transition: color 0.3s;
+}
+
+/* secci+on dos de productos */
+
+.container1 {
+    width: 90%;
+    margin: 5rem auto 3rem;
+}
+
+.libreria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tamaño1 {
+    background-color: var(--body-color);
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: background-color 0.5s; 
+}
+
+.tamaño2 {
+    transition: background-color 0.3s;
+}
+
+.tamaño3 {
+    transition: background-color 0.3s;
+}
+
+.tamaño4 {
+    transition: background-color 0.3s;
+}
+
+.all{
+    padding: 8px 10px;
+}
+
+.shirt{
+    padding: 8px 36px;
+}
+
+.hoddie{
+    padding: 8px 36px;
+}
+
+.sweater{
+    padding: 8px 36px;
+}
+
+.p0 {
+    font-weight: 600;
+    color: var(--text-color);
+    transition: color 0.5s;
+}
+
+.p1 {
+    font-size: 13px;
+    color: var(--text-color-light);
+    transition: color 0.5s;
+}
+
+.tamaño1:hover {
+    background-color: var(--button-color);
+}
+
+.tamaño1:hover .p0 {
+    color: var(--body-color);
+}
+
+.tamaño1:hover .p1 {
+    color: var(--body-color);
+}
+
+#img0 {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    transition: transform 1s;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home {
+    background-color: var(--container-color);
+    height: 480px;
+    width: 390px;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.color {
+    background-color: var(--card-color);
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.mas {
+    background-color: var(--container-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.641);;
+    position: absolute;
+    padding: 0.5rem;
+    border-radius: 50%;
+    top: 365px;
+    left: 330px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transition: background-color 0.5s;
+}
+
+.icono-mas{
+    fill: var(--button-color);
+    cursor: pointer;
+    transition: fill 0.5s;
+    transition: color 0.3s;
+}
+
+.texto1 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+}
+
+.span3 {
+    color: var(--button-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.span4 {
+    color: var(--text-color-light);
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-left: 5rem;
+}
+
+.p2 {
+    color: var(--button-color);
+    font-size: 15.5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+/* ventana modal */
+
+.modal {
+    display: none;
+}
+
+.ver-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.394);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+/* sala de compra */
+
+.sala {
+    background-color: var(--container-color);
+    position: fixed;
+    right: 150%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 4;
+
+    transition: background-color 0.3s, right 1s;
+}
+
+.x {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 1rem 1rem 0;
+}
+
+.tamañoW {
+    display: block;
+}
+
+.sala-productos {
+    margin-top: 3rem;
+    height: 80%;
+    padding: 1rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.sala-producto-modifica {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.sala-producto--body--iconos {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 20px;
+    fill: var(--button-color);
+    padding-top: 20px;
+}
+
+.sala-producto--body {
+    display: flex;
+    flex-direction: column;
+}
+
+.p0 {
+    white-space: nowrap;
+}
+
+.sala-producto--img{
+    background-color: var(--card-color);
+    border: 2px solid var(--first-color);
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.img0 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+hr {
+    margin-bottom: 1rem;
+}
+
+.sala-total {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
+.menos-compra, .mas-compra, .basura-compra {
+    cursor: pointer;
+    width: 20px;
+}
+
+.basura-compra {
+    transition: color 0.3s;
+}
+
+.texto-compra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 3rem;
+}
+
+.span5 {
+    font-size: 13px;
+    color: var(--text-color-light);
+    transition: color 0.3s;
+}
+
+.span6 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 7.5rem;
+    color: var(--button-color-alt);
+    transition: color 0.3s;
+}
+
+.agotado {
+    padding: 0.3rem;
+    border-radius: 5px;
+    color: var(--body-color);
+    font-weight: 600;
+}
+
+.ver-sala {
+    right: 0;
+}
+
+.basura-compra:hover {
+    color: var(--first-color);
+}
+
+.mas:hover {
+    background-color: var(--first-color);
+}
+
+.mas:hover .icono-mas {
+    color: var(--container-color);
+}
+
+.p2:hover {
+    color: var(--first-color);
+}
+
+.home:hover .img0 {
+    transform: translateY(-10px);
+}
+
+/* pie */
+
+.pie {
+    background-color: var(--card-color);
+    width: 100%;
+    padding: 5rem 1.5rem;
+    margin-top: 5rem;
+    transition: background-color 0.3s;
+}
+
+.us {
+    padding: 1rem 0;
+}
+
+.product {
+    padding: 1rem 0;
+}
+
+.social {
+    padding: 1rem 0;
+}
+
+.logo1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.our {
+    padding: 1rem 0;
+}
+
+h3 {
+    color: var(--title-color);
+    padding-bottom: 1rem;
+}
+
+.h30 {
+    transition: color 0.3s;
+}
+
+.h300 {
+    transition: color 0.3s;
+}
+
+.h3000 {
+    transition: color 0.3s;
+}
+
+.h30000 {
+    transition: color 0.3s;
+}
+
+li {
+    list-style: none;
+    padding-bottom: 1rem;
+}
+
+.a2 {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.1s;
+}
+
+.a3 {
+    text-decoration: none;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.iconosh {
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.final {
+    background-color: var(--first-color);
+    padding: 15px;
+    display: flex;
+    text-align: center;
+    margin-top: 3rem;
+    transition: background-color 0.3s;
+}
+
+.p3 {
+    color: var(--body-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.a2:hover {
+    color: var(--title-color);
+}
+
+.iconosh:hover {
+    color: var(--title-color);
+}
+
+/* loading */
+
+.fondoLoading {
+    background-color: var(--body-color);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fondoLoading-move {
+    display: none;
+}
+
+.logoLoading {
+    fill: var(--first-color);
+    width: 7rem;
+    height: 7rem;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* maqueta uno */
+
+@media (min-width: 610px) and (max-width: 1000px) {
+
+    .container1>.libreria {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 5rem auto 3rem;
+        transition: margin 0.3s;
+    }
+
+    .libreria {
+        width: 75%;
+        transition: width 0.3s;
+    }
+
+    #p3 {
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        transition: margin 0.3s;
+    }
+
+}
+
+/* maqueta dos */
+
+@media (min-width: 700px) and (max-width: 1500px) {
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .fondo {
+        width: 290px;
+        height: 508px;
+        transition: width 0.3s, height 0.3s;
+    }
+
+    img {
+        padding-top: 6rem;
+        transition: padding-top 0.3s;
+    }
+
+    .container1>.libreria {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 5rem auto 3rem;
+        transition: margin 0.3s;
+    }
+
+    .libreria {
+        width: 100%;
+        transition: width 0.3s;
+    }
+
+    .tamaño1 {
+        margin: 0.5rem;
+        transition: margin 0.3s;
+    }
+
+    #p3 {
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        transition: margin 0.3s;
+    }
+
+    #nuevo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .menuu {
+        width: 50%;
+        height: 100vh;
+        transition: width 0.3s, height 0.3s;
+    }
+
+    .sala {
+        width: 50%;
+        height: 100vh;
+        transition: width 0.3s, height 0.3s;
+    }
+
+    .boton-compra {
+        padding: 1rem 7rem;
+    }
+
+    .menuu {
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 8rem;
+        height: 10vh;
+        width: 40%;
+        padding-left: 30px;
+        margin-top: 0.5rem;
+        transition: color 0.3s;
+    }
+
+    .list-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+}
+
+/* maqueta tres */
+
+@media (min-width: 940px) and (max-width: 1200px) {
+
+    .container {
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        transition: width 0.3s;
+    }
+
+    .text {
+        width: 50%;
+        transition: width 0.3s;
+    }
+
+}
+
+/* maqueta cuatro */
+
+@media (min-width: 1086px) and (max-width: 4000px) {
+
+    .container {
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        transition: width 0.3s, margin 0.3s;
+    }
+
+    .text {
+        width: 45%;
+        transition: width 0.3s;
+    }
+
+    .menuu {
+        width: 25%;
+        height: 100vh;
+        transition: width 0.3s, height 0.3s;
+    }
+
+    .sala {
+        width: 25%;
+        height: 100vh;
+        transition: width 0.3s, height 0.3s;
+    }
+
+    .boton-compra {
+        padding: 1rem 7rem;
+    }
+
+    .menuu {
+        background-color: transparent;
+        position: fixed;
+        left: 11rem;
+        top: 0;
+        height: 10vh;
+        width: 40%;
+        padding-left: 50px;
+        margin-top: 0.5rem;
+    }
+
+}
